@@ -12,19 +12,19 @@ spec:
     spec:
       containers:
         - name: cassandra
-          image: 172.30.192.249:5000/stateful-sets/cassandra-openstack-poc:latest
+          image: cassandra:latest
           restartPolicy: Always
           command:
           - "/opt/apache-cassandra/bin/docker-entrypoint-stateful-sets.sh"
           env:
             - name: CASSANDRA_SEEDS
-              value: 'cassandra-0.cassandra.default.svc.cluster.local'
+              value: 'cassandra-0.cassandra-poc.default.svc.cluster.local'
             - name: CASSANDRA_CLUSTER_NAME
-              value: OpenStack cluster
+              value: cassandra cluster
             - name: CASSANDRA_DC
               value: DC1
             - name: CASSANDRA_RACK
-              value: OpenStack rac
+              value: RAC1
           ports:
           - name: cql-port
             containerPort: 9042
@@ -45,4 +45,4 @@ spec:
           requests:
             storage: 1Gi
         accessModes:
-          - ReadWriteOnce          
+          - ReadWriteMany          

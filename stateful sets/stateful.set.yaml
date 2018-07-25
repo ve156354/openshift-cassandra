@@ -35,11 +35,11 @@ spec:
           - name: tls-intra
             containerPort: 7001    
           volumeMounts:
-            - name: cassandra-storage
+            - name: db
               mountPath: "/var/lib/cassandra/data"              
   volumeClaimTemplates:
     - metadata:
-        name: cassandra-storage
+        name: db
       spec:
         resources:
           requests:

@@ -18,7 +18,7 @@ spec:
           - "/opt/apache-cassandra/bin/docker-entrypoint-stateful-sets.sh"
           env:
             - name: CASSANDRA_SEEDS
-              value: 'cassandra-0.cassandra-poc.default.svc.cluster.local'
+              value: 'cassandra-0.cassandra-poc.svc.cluster.local'
             - name: CASSANDRA_CLUSTER_NAME
               value: cassandra cluster
             - name: CASSANDRA_DC

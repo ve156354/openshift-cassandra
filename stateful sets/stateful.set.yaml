@@ -4,7 +4,7 @@ metadata:
   name: cassandra
 spec:
   serviceName: "cassandra-peers"
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:

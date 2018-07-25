@@ -37,12 +37,6 @@ spec:
           volumeMounts:
             - name: db
               mountPath: "/var/lib/cassandra/data"              
-  volumeClaimTemplates:
-    - metadata:
-        name: db
-      spec:
-        resources:
-          requests:
-            storage: 1Gi
-        accessModes:
-          - ReadWriteMany          
+      volumes:
+        - emptyDir: {}
+          name: db         

@@ -49,7 +49,7 @@ RUN  mkdir -p /var/lib/cassandra \
 	&& chown -R cassandra:cassandra /var/lib/cassandra \
 	&& chmod 777 /var/lib/cassandra  && chmod +x /opt/apache-cassandra/bin/docker-entrypoint.sh && chmod +x /opt/apache-cassandra/bin/docker-entrypoint-stateful-sets.sh
 
-USER 313	
+USER 1020	
 
 VOLUME /var/lib/cassandra
 

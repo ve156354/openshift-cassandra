@@ -37,8 +37,8 @@ COPY docker-entrypoint-stateful-sets.sh \
      
 ADD cassandra.yaml.template /opt/apache-cassandra/conf/cassandra.yaml
 
-RUN groupadd -r cassandra -g 312 && \
-    useradd -u 313 -r -g cassandra -d /opt/apache-cassandra -s /sbin/nologin cassandra && \
+RUN groupadd -r cassandra -g 1020 && \
+    useradd -u 1020 -r -g cassandra -d /opt/apache-cassandra -s /sbin/nologin cassandra && \
     chown -R cassandra:cassandra /opt/apache-cassandra && \
     chmod -R go+rw /opt/apache-cassandra && \
     mkdir $HOME && \
